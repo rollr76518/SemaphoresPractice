@@ -11,6 +11,8 @@ import WebKit
 
 class ViewModel {
 	
+	fileprivate lazy var trackingSemaphores = makeSemaphores()
+	
 	func countOfTypes() -> Int {
 		return PageType.allCases.count
 	}
@@ -94,6 +96,7 @@ extension ViewModel {
 	
 	func setScreenName(_ screenName: String) {
 		print("send setScreenName event: \(screenName)")
+		trackingSemaphores[screenName]?.signal()
 	}
 	
 	func handleScriptMessage(_ message: WKScriptMessage) {
@@ -107,6 +110,23 @@ extension ViewModel {
 				else {
 					return
 			}
-			print("load page of screenName:\(screenName)")
+			DispatchQueue.global(qos: .background).async {
+				self.trackingSemaphores[screenName]?.wait()
+				print("load page of screenName:\(screenName)")
+			}
 		}
 	}
+}
+
+// MARK: - Lazy Initialization
+
+extension ViewModel {
+	
+	fileprivate func makeSemaphores() -> [String: DispatchSemaphore] {
+		return PageType.allCases.reduce([:]) { (result, type) -> [String: DispatchSemaphore] in
+			var temp = result
+			temp[type.screenName] = DispatchSemaphore(value: 0)
+			return temp
+		}
+	}
+}
