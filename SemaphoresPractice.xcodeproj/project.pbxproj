@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3256D681027419D039D94E /* Pods_SemaphoresPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AD2662C7753E121AC79FE9 /* Pods_SemaphoresPractice.framework */; };
 		94FDCCCD243CCF5400409A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDCCCC243CCF5400409A34 /* AppDelegate.swift */; };
 		94FDCCCF243CCF5400409A34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDCCCE243CCF5400409A34 /* SceneDelegate.swift */; };
 		94FDCCD1243CCF5400409A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDCCD0243CCF5400409A34 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D316E2E2F0C4CA302E01475 /* Pods-SemaphoresPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemaphoresPractice.release.xcconfig"; path = "Target Support Files/Pods-SemaphoresPractice/Pods-SemaphoresPractice.release.xcconfig"; sourceTree = "<group>"; };
 		94FDCCC9243CCF5400409A34 /* SemaphoresPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemaphoresPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FDCCCC243CCF5400409A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94FDCCCE243CCF5400409A34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		94FDCCD5243CCF5500409A34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94FDCCD8243CCF5500409A34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94FDCCDA243CCF5500409A34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB76B8F0723FC8B8F7E15A5E /* Pods-SemaphoresPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemaphoresPractice.debug.xcconfig"; path = "Target Support Files/Pods-SemaphoresPractice/Pods-SemaphoresPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		D1AD2662C7753E121AC79FE9 /* Pods_SemaphoresPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SemaphoresPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3256D681027419D039D94E /* Pods_SemaphoresPractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A655B66AFC1EBDCDAC12B6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1AD2662C7753E121AC79FE9 /* Pods_SemaphoresPractice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A2501D63A3E2175282948A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB76B8F0723FC8B8F7E15A5E /* Pods-SemaphoresPractice.debug.xcconfig */,
+				3D316E2E2F0C4CA302E01475 /* Pods-SemaphoresPractice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		94FDCCC0243CCF5400409A34 = {
 			isa = PBXGroup;
 			children = (
 				94FDCCCB243CCF5400409A34 /* SemaphoresPractice */,
 				94FDCCCA243CCF5400409A34 /* Products */,
+				4A2501D63A3E2175282948A5 /* Pods */,
+				0A655B66AFC1EBDCDAC12B6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94FDCCDD243CCF5500409A34 /* Build configuration list for PBXNativeTarget "SemaphoresPractice" */;
 			buildPhases = (
+				626BF1336B13B43869693442 /* [CP] Check Pods Manifest.lock */,
 				94FDCCC5243CCF5400409A34 /* Sources */,
 				94FDCCC6243CCF5400409A34 /* Frameworks */,
 				94FDCCC7243CCF5400409A34 /* Resources */,
+				B8458716126E8036D76831C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		626BF1336B13B43869693442 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SemaphoresPractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8458716126E8036D76831C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SemaphoresPractice/Pods-SemaphoresPractice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SemaphoresPractice/Pods-SemaphoresPractice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SemaphoresPractice/Pods-SemaphoresPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94FDCCC5243CCF5400409A34 /* Sources */ = {
@@ -282,11 +350,13 @@
 		};
 		94FDCCDE243CCF5500409A34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB76B8F0723FC8B8F7E15A5E /* Pods-SemaphoresPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9LB9NKBAM6;
 				INFOPLIST_FILE = SemaphoresPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +370,13 @@
 		};
 		94FDCCDF243CCF5500409A34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D316E2E2F0C4CA302E01475 /* Pods-SemaphoresPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9LB9NKBAM6;
 				INFOPLIST_FILE = SemaphoresPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
