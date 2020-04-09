@@ -14,6 +14,9 @@
 		94FDCCD4243CCF5400409A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FDCCD2243CCF5400409A34 /* Main.storyboard */; };
 		94FDCCD6243CCF5500409A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FDCCD5243CCF5500409A34 /* Assets.xcassets */; };
 		94FDCCD9243CCF5500409A34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FDCCD7243CCF5500409A34 /* LaunchScreen.storyboard */; };
+		94FDCCE1243CD5D900409A34 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDCCE0243CD5D900409A34 /* ViewModel.swift */; };
+		94FDCCE3243CD6B200409A34 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDCCE2243CD6B200409A34 /* WebViewController.swift */; };
+		94FDCCE5243CD84900409A34 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 94FDCCE4243CD84900409A34 /* demo.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		94FDCCD5243CCF5500409A34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94FDCCD8243CCF5500409A34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94FDCCDA243CCF5500409A34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94FDCCE0243CD5D900409A34 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		94FDCCE2243CD6B200409A34 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		94FDCCE4243CD84900409A34 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
 		CB76B8F0723FC8B8F7E15A5E /* Pods-SemaphoresPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemaphoresPractice.debug.xcconfig"; path = "Target Support Files/Pods-SemaphoresPractice/Pods-SemaphoresPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		D1AD2662C7753E121AC79FE9 /* Pods_SemaphoresPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SemaphoresPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,10 +89,13 @@
 				94FDCCCC243CCF5400409A34 /* AppDelegate.swift */,
 				94FDCCCE243CCF5400409A34 /* SceneDelegate.swift */,
 				94FDCCD0243CCF5400409A34 /* ViewController.swift */,
+				94FDCCE0243CD5D900409A34 /* ViewModel.swift */,
+				94FDCCE2243CD6B200409A34 /* WebViewController.swift */,
 				94FDCCD2243CCF5400409A34 /* Main.storyboard */,
 				94FDCCD5243CCF5500409A34 /* Assets.xcassets */,
 				94FDCCD7243CCF5500409A34 /* LaunchScreen.storyboard */,
 				94FDCCDA243CCF5500409A34 /* Info.plist */,
+				94FDCCE4243CD84900409A34 /* demo.html */,
 			);
 			path = SemaphoresPractice;
 			sourceTree = "<group>";
@@ -152,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94FDCCD9243CCF5500409A34 /* LaunchScreen.storyboard in Resources */,
+				94FDCCE5243CD84900409A34 /* demo.html in Resources */,
 				94FDCCD6243CCF5500409A34 /* Assets.xcassets in Resources */,
 				94FDCCD4243CCF5400409A34 /* Main.storyboard in Resources */,
 			);
@@ -208,6 +218,8 @@
 			files = (
 				94FDCCD1243CCF5400409A34 /* ViewController.swift in Sources */,
 				94FDCCCD243CCF5400409A34 /* AppDelegate.swift in Sources */,
+				94FDCCE1243CD5D900409A34 /* ViewModel.swift in Sources */,
+				94FDCCE3243CD6B200409A34 /* WebViewController.swift in Sources */,
 				94FDCCCF243CCF5400409A34 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

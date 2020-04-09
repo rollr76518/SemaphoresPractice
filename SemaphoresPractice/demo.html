@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo for integrate with ios </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #app{
+            max-width: 414px;
+        }
+        #app ul{
+            border-radius: 4px;
+            border: 1px solid #000;
+            background: #DEDEDE;
+            overflow: hidden;
+        }
+        #app ul li{
+            list-style: none;
+            width: 100%;
+            min-height: 100px;
+            border-bottom: 1px solid #000;
+            padding: 12px;
+        }
+        #app ul li button{
+            border-radius: 4px;
+            padding: 10px;
+            border: 1px solid #000;
+            cursor: pointer;
+            background-color: #FFF;
+        }
+    </style>
+</head>
+<body id="app">
+    <ul>
+        <li><button data-message="First Button">First</button></li>
+        <li><button data-message="Second Button">Second</button></li>
+        <li><button data-message="Third Button">Third</button></li>
+        <li><button data-message="Fourth Button">Fourth</button></li>
+        <li><button data-message="Fifth Button">Fifth</button></li>
+    </ul>
+    <script>
+        function logEvent(message){
+            try{
+                window.webkit.messageHandlers.logEvent.postMessage(message)
+            } catch(e){
+                console.log(message);
+                console.error(e);
+            }
+        }
+        function init(){
+            if(location.search == '?tab=1'){
+                logEvent('left');
+            }else if(location.search == '?tab=2'){
+                logEvent('right');
+            }else{
+                logEvent('init no tab');
+            }
+
+            document.querySelectorAll("#app button").forEach(bindClickEvent);
+        }
+        function bindClickEvent(el){
+            el.addEventListener("click", function(e){
+                var message = e.target.dataset.message;
+                logEvent(message);
+            });
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
